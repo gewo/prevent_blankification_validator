@@ -1,0 +1,4 @@
+en:
+  errors:
+    messages:
+      cannot_be_blanked: must not be deleted
