@@ -1,5 +1,7 @@
 # PreventBlankificationValidator
 
+[![Build Status](https://travis-ci.org/gewo/prevent_blankification_validator.png)](https://travis-ci.org/gewo/prevent_blankification_validator/)
+
 Rails 3 Validator, that prevents attributes from being changed to a blank value
 once they're present.
 

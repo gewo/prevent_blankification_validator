@@ -13,7 +13,6 @@ module ActiveModel
     # Usage: validates :field, prevent_blankification: true
     class PreventBlankificationValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
-        options[:foo]
         must_have_dirty_tracking_enabled!(record, attribute)
 
         dirty_value = record.send "#{attribute}_was"
