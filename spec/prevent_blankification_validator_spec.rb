@@ -30,7 +30,7 @@ describe ActiveModel::Validations::PreventBlankificationValidator do
     BLANKS.each do |new_value|
       it "has errors when new_value == '#{new_value.inspect}'" do
         @mock.errors.should_receive :add
-        @validator.validate_each(@mock, 'attribute', '')
+        @validator.validate_each(@mock, 'attribute', new_value)
       end
     end
 
