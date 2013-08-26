@@ -3,7 +3,7 @@ require 'spec_helper'
 describe ActiveModel::Validations::PreventBlankificationValidator do
   before :each do
     @validator = ActiveModel::Validations::PreventBlankificationValidator.
-      new({ attributes: {} })
+      new({ attributes: [:attribute] })
 
     @mock = mock('model')
     @mock.stub('errors').and_return []
