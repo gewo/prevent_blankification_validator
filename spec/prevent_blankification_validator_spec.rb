@@ -5,7 +5,7 @@ describe ActiveModel::Validations::PreventBlankificationValidator do
     @validator = ActiveModel::Validations::PreventBlankificationValidator.
       new({ attributes: [:attribute] })
 
-    @mock = mock('model')
+    @mock = double
     @mock.stub('errors').and_return []
     @mock.errors.stub('[]').and_return {}
   end
