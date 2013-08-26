@@ -1,17 +1,22 @@
-if RUBY_VERSION =~ /1\.9/ && RUBY_ENGINE == 'ruby'
-  require 'simplecov'
+require 'simplecov'
+require 'coveralls'
 
-  SimpleCov.start do
-    add_filter "/spec"
-  end
-
-  SimpleCov.at_exit do
-    File.open(File.join(SimpleCov.coverage_path, 'percent.txt'), 'w') do |f|
-      f.write SimpleCov.result.covered_percent
-    end
-    SimpleCov.result.format!
-  end
+SimpleCov.start do
+  add_filter "/spec"
 end
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+  SimpleCov::Formatter::HTMLFormatter,
+  Coveralls::SimpleCov::Formatter
+]
+
+SimpleCov.at_exit do
+  File.open(File.join(SimpleCov.coverage_path, 'percent.txt'), 'w') do |f|
+    f.write SimpleCov.result.covered_percent
+  end
+  SimpleCov.result.format!
+end
+SimpleCov.start
 
 require 'active_model'
 require 'prevent_blankification_validator'
