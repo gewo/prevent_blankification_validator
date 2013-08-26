@@ -1,6 +1,10 @@
 # PreventBlankificationValidator
 
 [![Build Status](https://travis-ci.org/gewo/prevent_blankification_validator.png)](https://travis-ci.org/gewo/prevent_blankification_validator/)
+[![Code Coverage](https://coveralls.io/repos/gewo/prevent_blankification_validator/badge.png)](https://coveralls.io/r/gewo/prevent_blankification_validator)
+[![Code Climate](https://codeclimate.com/github/gewo/prevent_blankification_validator.png)](https://codeclimate.com/github/gewo/prevent_blankification_validator)
+[![Gem Version](https://badge.fury.io/rb/prevent_blankification_validator.png)](http://badge.fury.io/rb/prevent_blankification_validator)
+[![Dependency Status](https://gemnasium.com/gewo/prevent_blankification_validator.png)](https://gemnasium.com/gewo/prevent_blankification_validator)
 
 Rails 3 Validator, that prevents attributes from being changed to a blank value
 once they're present.
